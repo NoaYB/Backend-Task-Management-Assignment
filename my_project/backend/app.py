@@ -6,7 +6,7 @@ from models import db, User, Task
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = 'your_jwt_secret'  # החלף עם מפתח סודי
+app.config['JWT_SECRET_KEY'] = 'your_jwt_secret'  # 
 
 db.init_app(app)
 migrate = Migrate(app, db)
@@ -118,5 +118,5 @@ def delete_task(task_id):
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # יוצר את הטבלאות במסד הנתונים
-    app.run(debug=True, port=8000)  # запускает приложение с отладкой על פורט 8000
+        db.create_all()  # 
+    app.run(debug=True, port=8000)  
